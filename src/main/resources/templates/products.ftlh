@@ -8,18 +8,25 @@
     <title>Document</title>
     <h1>BuySell</h1> <hr>
     <h4>Товари зі всієї України.</h4>
+
+    <form>
+        Пошук за назвою : <input type="text" name="title"><br>
+        <input type="submit" value="Пошук">
+    </form>
     <#list products as product>
         <div>
             <p><b>${product.title}</b></p>
             <p>${product.price}</p>
             <a href="/product/${product.id}">More.....</a>
         </div>
+        <#else >
+        Товарів немає
     </#list>
     <hr>
     <h3>Створити новий товар</h3>
     <form action="/product/create" method="post">
         Назва об'яви : <input type="text" name="title"> <br><br>
-        Опис об'яви : <input type="text" name="desc"> <br><br>
+        Опис об'яви : <input type="text" name="description"> <br><br>
         Ціна: <input type="number" name="price"> <br><br>
         Місто : <input type="text" name="town"> <br><br>
         Ім'я автора : <input type="text" name="author"> <br><br>
