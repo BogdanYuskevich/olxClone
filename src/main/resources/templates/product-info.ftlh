@@ -17,11 +17,12 @@
 <b>Опис товару ${product.description}</b> <br>
 <b>Ціна товару ${product.price}</b> <br>
 <b>Місто товару ${product.town}</b> <br>
-<b>Автор ${product.author}</b> <br>
+<b>Автор ${product.user.name}</b> <br>
+<b>Номер телефону ${product.user.phone}</b> <br>
 <hr>
-<h3>Видалити товар</h3>
-<form action="/product/delete/${product.id}" method="post">
-    <input type="submit" value="Видалити товар">
-</form>
+<#--<h3>Видалити товар</h3>-->
+<#--<form action="/product/delete/${product.id}" method="post">-->
+<#--    <input type="submit" value="Видалити товар">-->
+<#--</form>-->
 </body>
 </html>

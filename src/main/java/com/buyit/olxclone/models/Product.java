@@ -29,16 +29,19 @@ public class Product {
     private int price;
     @Column(name = "town")
     private String town;
-    @Column(name = "author")
-    private String author;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "product")
     private List<Imagine> imagines = new ArrayList<>();
     private Long previewImageId;
     private LocalDateTime dateOfCreated;
-    private void init () {
+    @ManyToOne(cascade = CascadeType.REFRESH,fetch = FetchType.LAZY)
+    @JoinColumn
+    private User user;
+
+    private void init() {
         dateOfCreated = LocalDateTime.now();
-        }
-    public void addImageToProduct (Imagine imagine) {
+    }
+
+    public void addImageToProduct(Imagine imagine) {
         imagine.setProduct(this);
         imagines.add(imagine);
     }
