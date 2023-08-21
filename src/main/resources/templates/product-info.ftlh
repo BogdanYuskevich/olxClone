@@ -17,8 +17,8 @@
 <b>Опис товару ${product.description}</b> <br>
 <b>Ціна товару ${product.price}</b> <br>
 <b>Місто товару ${product.town}</b> <br>
-<b>Автор ${product.user.name}</b> <br>
-<b>Номер телефону ${product.user.phone}</b> <br>
+<b>Автор: </b><a href="/user/${product.user.id}">${product.user.name}</a><br>
+<b>Номер телефону</b>${product.user.id}" ${product.user.phone}<br>
 <hr>
 <#--<h3>Видалити товар</h3>-->
 <#--<form action="/product/delete/${product.id}" method="post">-->
