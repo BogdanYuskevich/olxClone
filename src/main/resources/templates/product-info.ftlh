@@ -8,7 +8,8 @@
     <title>Product Info</title>
 </head>
 <body>
-<h1>BuySell</h1> <hr>
+<h1>Buy It</h1>
+<hr>
 <h4>Подробна інформація про товар</h4>
 <#list imagines as img>
     <img src="/images/${img.id}" height="60px" alt="imagine"> <br> <br>

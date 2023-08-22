@@ -4,7 +4,8 @@
     <title>Buy It</title>
 </head>
 <body>
-<h1>Buy It</h1><hr>
+<h1>Buy It</h1>
+<hr>
 <h3>Докладно про користувача ${user.name}</h3>
 <b>Номер телефону: </b> ${user.phone}<br>
 <b>Email: </b> ${user.email}<br>

@@ -1,4 +1,5 @@
-<h1>BUYSELL</h1><hr>
+<h1>Buy it</h1>
+<hr>
 <h4>Авторизація</h4>
 <form action="/login" method="post">
     Email: <input type="email" name="username"><br><br>
