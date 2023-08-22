@@ -29,7 +29,11 @@
                     <input type="submit" value="Бан">
                 </form>
             </th>
-            <th><a href="/admin/user/edit/${user.id}">Редагування</a></th>
+            <!-- ... (попередній HTML-код) ... -->
+            <input type="hidden" name="_csrf" value="${_csrf.token}">
+            <th><a href="/editRoles/${user.id}">Редагування</a></th>
+            <!-- ... (залишок HTML-коду) ... -->
+
             <th><a href="/user/${user.id}">Подробная информация</a></th>
         </tr>
     <#else>

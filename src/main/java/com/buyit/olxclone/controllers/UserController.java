@@ -30,12 +30,11 @@ public class UserController {
 
     @PostMapping("/registration")
     public String registration(User user, Model model) {
-        if (!userService.createUser(user)) {
+
             model.addAttribute("errorMessage", "Користувач з цим email : " +
                     "" + user.getEmail() + " уже існує");
             return "registration";
-        }
-        return "redirect:/login";
+
     }
 
     @GetMapping("/hello")
